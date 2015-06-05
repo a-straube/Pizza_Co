@@ -5,16 +5,44 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <title>Pizza PDX</title>
   </head>
+
   <body>
-    <div class="container page-wrapper">
+    <br>
+    <div class="container page-wrapper well">
+      <h1>Pizza PDX</h1>
+      <hr>
+      <h3>Create a pizza!</h3>
       <form id="create-pizza">
+
+        <label for="pizza-size">Chose a size:</label>
         <select id="pizza-size">
           <option value="large">Large</option>
           <option value="medium">Medium</option>
           <option value="large">Small</option>
         </select>
+
+        <br>
+
+        <label for="toppings">Add toppings:</label>
+        <div class="checkbox">
+          <ul>
+          <li><input type="checkbox" value="Pepperoni">Pepperoni</input></li>
+          <li><input type="checkbox" value="Mushrooms">Mushrooms</input></li>
+          <li><input type="checkbox" value="Onions">Onions</input></li>
+          <li><input type="checkbox" value="Sausage">Sausage</input></li>
+          <li><input type="checkbox" value="Bacon">Bacon</input></li>
+          <li><input type="checkbox" value="Olives">Olives</input></li>
+          <li><input type="checkbox" value="Garlic">Garlic</input></li>
+          <li><input type="checkbox" value="Green peppers">Green peppers</input></li>
+          <li><input type="checkbox" value="Pineapple">Pineapple</input></li>
+          <li><input type="checkbox" value="Spinach">Spinach</input></li>
+          </ul>
+        </div>
+
+        <label for="quantity">Choose a quantity:</label>
         <select id="quantity">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -27,8 +55,12 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
+
+        <br>
+
         <button type="submit" class="btn btn-warning">Add to cart</button>
       </form>
+
     </div>
   </body>
 </html>
