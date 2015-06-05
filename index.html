@@ -14,53 +14,65 @@
     <div class="container page-wrapper well">
       <h1>Pizza PDX</h1>
       <hr>
-      <h3>Create a pizza!</h3>
-      <form id="create-pizza">
 
-        <label for="pizza-size">Chose a size:</label>
-        <select id="pizza-size">
-          <option value="large">Large</option>
-          <option value="medium">Medium</option>
-          <option value="large">Small</option>
-        </select>
+      <div class="create-pizza-form">
+        <h3>Create a pizza!</h3>
+        <div class="row"
+          <form id="create-pizza">
 
-        <br>
+            <div class="col-sm-3">
+              <label for="pizza-size">Chose a size:</label>
+              <select id="pizza-size">
+                <option value="large">Large</option>
+                <option value="medium">Medium</option>
+                <option value="large">Small</option>
+              </select>
+            </div>
 
-        <label for="toppings">Add toppings:</label>
-        <div class="checkbox">
-          <ul>
-          <li><input type="checkbox" value="Pepperoni">Pepperoni</input></li>
-          <li><input type="checkbox" value="Mushrooms">Mushrooms</input></li>
-          <li><input type="checkbox" value="Onions">Onions</input></li>
-          <li><input type="checkbox" value="Sausage">Sausage</input></li>
-          <li><input type="checkbox" value="Bacon">Bacon</input></li>
-          <li><input type="checkbox" value="Olives">Olives</input></li>
-          <li><input type="checkbox" value="Garlic">Garlic</input></li>
-          <li><input type="checkbox" value="Green peppers">Green peppers</input></li>
-          <li><input type="checkbox" value="Pineapple">Pineapple</input></li>
-          <li><input type="checkbox" value="Spinach">Spinach</input></li>
-          </ul>
+            <div class="col-sm-3">
+              <label for="toppings">Add toppings:</label>
+              <div class="checkbox" id="toppings">
+                <ul>
+                <li><input type="checkbox" value="Pepperoni">Pepperoni</input></li>
+                <li><input type="checkbox" value="Mushrooms">Mushrooms</input></li>
+                <li><input type="checkbox" value="Onions">Onions</input></li>
+                <li><input type="checkbox" value="Sausage">Sausage</input></li>
+                <li><input type="checkbox" value="Bacon">Bacon</input></li>
+                <li><input type="checkbox" value="Olives">Olives</input></li>
+                <li><input type="checkbox" value="Garlic">Garlic</input></li>
+                <li><input type="checkbox" value="Green peppers">Green peppers</input></li>
+                <li><input type="checkbox" value="Pineapple">Pineapple</input></li>
+                <li><input type="checkbox" value="Spinach">Spinach</input></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <label for="quantity">Choose quantity:</label>
+              <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+            <button type="submit" class="btn btn-warning">Add to cart</button>
+            </div>
+
+          </form>
         </div>
+      </div>
 
-        <label for="quantity">Choose a quantity:</label>
-        <select id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-
-        <br>
-
-        <button type="submit" class="btn btn-warning">Add to cart</button>
-      </form>
-
+      <div class="cart">
+      </div>
     </div>
   </body>
 </html>
