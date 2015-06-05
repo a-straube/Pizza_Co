@@ -7,6 +7,6 @@ describe('Pizza', function() {
 
   it("returns the price of a pizza", function() {
     var testPizza = new Pizza("large", 2, ["Garlic", "Pepperoni"]);
-    expect(testPizza.price()).to.equal(23);
+    expect(testPizza.price()).to.equal('23.00');
   });
 });

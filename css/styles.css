@@ -1,6 +1,6 @@
 body {
   background: url(../img/pizza.jpg) no-repeat;
-  background-size: cover;
+  -background-size: cover;
   font-family: 'Quicksand', sans-serif !important;
 }
 
@@ -11,4 +11,8 @@ body {
 h1 {
   text-align: center;
   font-size: 100px !important;
+}
+
+#sub-title-line-sm-txt {
+  font-size: 14px;
 }
