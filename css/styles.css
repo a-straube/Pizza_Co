@@ -1,0 +1,14 @@
+body {
+  background: url(../img/pizza.jpg) no-repeat;
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.container.page-wrapper {
+  background: rgba(225, 215, 215, .75);
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px !important;
+}
