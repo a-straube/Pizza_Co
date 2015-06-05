@@ -23,14 +23,14 @@
             <div class="col-sm-3">
               <label for="pizza-size">Chose a size:</label>
               <select id="pizza-size">
-                <option value="large">Large</option>
+                <option value="small">Small</option>
                 <option value="medium">Medium</option>
-                <option value="large">Small</option>
+                <option value="large">Large</option>
               </select>
             </div>
 
             <div class="col-sm-3">
-              <label for="toppings">Add toppings:</label>
+              <label for="toppings">Add toppings:<br>($0.25 each)</label>
               <div class="checkbox" id="toppings">
                 <ul>
                 <li><input type="checkbox" value="Pepperoni">Pepperoni</input></li>
@@ -72,7 +72,12 @@
       </div>
 
       <div class="cart">
-        <h3>Your order total is: $<span id="pizza-price"></span></h3>
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Your order total is: $<span id="pizza-price"></span></h3>
+            <h4>Pizza PDX appreciates your business!</h4>
+          </div>
+        </div>
       </div>
     </div>
   </body>

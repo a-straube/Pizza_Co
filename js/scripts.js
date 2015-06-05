@@ -1,7 +1,7 @@
-function Pizza(pizzaSize, quantity) {
+function Pizza(pizzaSize, quantity, toppings) {
   this.pizzaSize = pizzaSize;
   this.quantity = quantity;
-  this.toppings = [];
+  this.toppings = toppings;
 };
 
 Pizza.prototype.price = function() {
@@ -13,29 +13,27 @@ Pizza.prototype.price = function() {
     standardPrice += 4;
   }
 
-  // if (this.toppings.length != 0) {
-    // if (this.toppings.length === 1) {
-    //   standardPrice += .25;
-    // } else if (this.toppings.length === 2) {
-    //   standardPrice += .50;
-    // } else if (this.toppings.length === 3) {
-    //   standardPrice += .75;
-    // } else if (this.toppings.length === 4) {
-    //   standardPrice += 1;
-    // } else if (this.toppings.length === 5) {
-    //   standardPrice += 1.25;
-    // } else if (this.toppings.length === 6) {
-    //   standardPrice += 1.5;
-    // } else if (this.toppings.length === 7) {
-    //   standardPrice += 1.75;
-    // } else if (this.toppings.length === 8) {
-    //   standardPrice += 2;
-    // } else if (this.toppings.length === 9) {
-    //   standardPrice += 2.25;
-    // } else if (this.toppings.length === 10) {
-    //   standardPrice += 2.5;
-    // }
-  // }
+  if (this.toppings.length === 1) {
+    standardPrice += .25;
+  } else if (this.toppings.length === 2) {
+    standardPrice += .50;
+  } else if (this.toppings.length === 3) {
+    standardPrice += .75;
+  } else if (this.toppings.length === 4) {
+    standardPrice += 1;
+  } else if (this.toppings.length === 5) {
+    standardPrice += 1.25;
+  } else if (this.toppings.length === 6) {
+    standardPrice += 1.5;
+  } else if (this.toppings.length === 7) {
+    standardPrice += 1.75;
+  } else if (this.toppings.length === 8) {
+    standardPrice += 2;
+  } else if (this.toppings.length === 9) {
+    standardPrice += 2.25;
+  } else if (this.toppings.length === 10) {
+    standardPrice += 2.5;
+  }
 
   if (this.quantity === 2) {
     standardPrice *= 2;
@@ -64,20 +62,26 @@ function updateTextOnPage(selector, text) {
   $(selector).text(text);
 }
 
-$(document).ready(function(){
+$(function(){
   $(".cart").hide();
 
   $("form#create-pizza").submit(function(event) {
     event.preventDefault();
 
     var newPizzaSize = $("#pizza-size :selected").val();
-    var newPizzaQuantity = $("#quantity :selected").val();
+    var newPizzaToppings = [];
+    $("#toppings input:checkbox:checked").each(function() {
+      newPizzaToppings.push($(this).val());
+    });
+    var newPizzaQuantity = parseInt($("#quantity :selected").val());
 
-    newPizza = new Pizza(newPizzaSize, newPizzaQuantity);
+    newPizza = new Pizza(newPizzaSize, newPizzaQuantity, newPizzaToppings);
+
+    // newPizza.toppings.push(newPizzaToppings);
 
     updateTextOnPage("#pizza-price", newPizza.price());
 
-    $(".create-pizza").slideUp();
+    $(".create-pizza").hide();
     $(".cart").show();
   });
 });
