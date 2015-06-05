@@ -55,7 +55,7 @@ Pizza.prototype.price = function() {
     standardPrice *= 10;
   }
 
-  return standardPrice;
+  return standardPrice.toFixed(2);
 };
 
 function updateTextOnPage(selector, text) {
